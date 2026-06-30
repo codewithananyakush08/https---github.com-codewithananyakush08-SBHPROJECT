@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-fluid">
+        <!--navbar start-->
+        <div class="row sticky-top" id="navbar">
+            <div class="col-sm-4">
+                <img src="{% static 'img/img.png' %}" alt="" style="height:70px;  width:70px;">
+            </div>
+            <div class="col-sm-6">
+                <nav class="navbar navbar-expand-lg" >
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}"><span
+                                            style="color:#ff6900">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'services' %}"><span
+                                            style="color:white">Services</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'projects' %}"> <span
+                                            style="color:white">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}"><span
+                                            style="color:white">About</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}"><span
+                                            style="color:wheat">Contact</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-2"><a href="{% url 'sign' %}">
+                    <button class="btn btn px-4  py-2 mt-2" type="submit" style=" background-color:#ff6900"><span
+                            style="color:white;">Sign In </span></button></div></a>
+            <br><br>
+        </div>
+        <!--navbar end-->
+        {% block main %}
+        {% endblock %}
+        <!-- footer start -->
+        <div class="row text-light" style="background-color:#141b2b;">
+            <div class="col-sm-3  ps-3  py-3">
+                <img src="{% static 'img/img.png' %}" alt="" style="height:70px;  width:70px;">
+                <p>An innovative digital platform transforming traditional home construction methods through seamless
+                    collaboration between homeowners, architects, contractors, and suppliers.
+                </p>
+                <span style="color: aliceblue;"><i class="fa-brands fa-1x fa-facebook"></i>&nbsp;&nbsp;<i
+                        class="fa-brands fa-1x fa-twitter"></i>&nbsp;&nbsp;<i
+                        class="fa-brands fa-1x fa-instagram"></i>&nbsp;&nbsp;<i
+                        class="fa-solid  fa-1x fa-globe"></i>&nbsp;&nbsp;<i
+                        class="fa-brands fa-1x fa-youtube"></i></span>
+            </div>
+            <div class="col-sm-3  py-5 px-5 ">
+                <h5>Quick Links</h5><br><a href="" style="text-decoration: none;"><span
+                        style="color:aliceblue">Home</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Service</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Projects</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">About Us</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Contact</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Blog</span></a>
+            </div>
+            <div class="col-sm-2  py-5  ">
+                <h5>Our Services</h5><br><a href="" style="text-decoration: none;"><span style="color:aliceblue">Project
+                        Management</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Architecture
+                        PLanning</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Contractor
+                        collaboration</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Suppply Chain
+                        Solutions</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Sustainablity
+                        Consutating</span></a><br>
+                <a href="" style="text-decoration: none;"><span style="color:aliceblue">Client Portal Access</span></a>
+
+            </div>
+            <div class="col-sm-4  py-5 px-5">
+                <h5>Contact Us</h5><a href="" style="text-decoration: none;"><span style="color:white;">
+                        <span style="color:#ff6900"><i class="fa-solid  fa-1x fa-location-dot"></i></span> <small>123
+                            Construction Avenue,
+                            Building <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; District, CA 90210</small><br>
+                        <span style="color:#ff6900"><i
+                                class="fa-solid  fa-1x fa-envelope"></i></span><small>&nbsp;&nbsp;&nbsp;info@smartbuildhub.com</small><br>
+                        <span style="color:#ff6900"><i
+                                class="fa-solid  fa-1x fa-phone"></i></span><small>&nbsp;&nbsp;&nbsp;+91
+                            70075758886</small></a></span>
+                <br><br>
+                <h3>Subscribe to our newsletter</h3><br>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email" required><button type="submit"><i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 pt-5 px-4">
+                    <iframe
+                        src="
+                        https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.2762350643666!2d80.99890839999999!3d26.9581503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2addd9b239%3A0xc21a9bbd557936ec!2sIntegral%20University!5e0!3m2!1sen!2sin!4v1753490923884!5m2!1sen!2sin"
+                        width="1290" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <br><br>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 px-5">
+                    <span style="color:beige"><small>&copy; 2025 Smart Bulid Hub. Designed and Developed
+                            by</small></span>
+                    <span style="color:yellow">Ananya kushwaha</span>
+                </div>
+                <div class="col-sm-4 "> <a href="" style="text-decoration: none;"><span
+                            style="color:aliceblue"><small>Privacy Policy</small></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" style="text-decoration: none;"><span style="color:aliceblue"><small>Terms of
+                                Service</small></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""
+                        style="text-decoration: none;"><span style="color:aliceblue">
+                            <small>Cookie Policy </small>
+                        </span></a>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

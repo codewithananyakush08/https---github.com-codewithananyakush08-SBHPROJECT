@@ -1,0 +1,49 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+<div class="row">
+    <div class="col-sm-11  mx-auto">
+
+            <h2 style="font-family:'Algerian', serif; color:rgb(15, 83, 61)">Admin Dashboard </h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Total homeowner</h4>
+                        <h2>{{th}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Total Contractor</h4>
+                        <h2>{{tc}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Total Projects</h4>
+                        <h2>{{tp}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Completed projects</h4>
+                        <h2>{{trp}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Ongoing projects</h4>
+                        <h2>{{tcp}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card p-5 shadow text-center">
+                        <h4>Total Enquiry</h4>
+                        <h2>{{enqs}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+{% endblock %}

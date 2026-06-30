@@ -1,0 +1,197 @@
+@media only screen and (max-width:767px) {
+    .menumarginleft {
+        margin-left: 0;
+    }
+
+
+    .deptname h5 {
+
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    .deptname h3 {
+
+        font-size: 0.8em;
+        margin: 0;
+        display: none;
+    }
+
+    .arrow-steps .step:after,
+    .arrow-steps .step:before,
+    .pos01,
+    .pos02,
+    .arrow-steps .step:before,
+    .arrow-steps .step.current:after {
+        display: none;
+    }
+
+    .custom-active {
+        padding: 15px;
+    }
+
+    .ums-name {
+        margin-bottom: 10px;
+        font-size: 1.3em;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+    .login-form h3 {
+
+        font-size: 17px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item {
+
+        width: 50px;
+        height: 50px;
+    }
+
+    .help {
+        top: 13%;
+        width: 50px;
+        height: 50px;
+        margin: 10px 15px;
+    }
+
+    .captcha {
+        margin-bottom: 2em;
+    }
+
+    .loginsidebar {
+
+        padding-top: 5px;
+        background: #0e2839;
+    }
+
+    .login-form {
+        min-height: auto;
+        width: 100%;
+        padding: 20px 0 !important;
+    }
+
+    .deptname {
+        text-align: left;
+
+    }
+
+    .header .dash-logo {
+        max-width: 90%;
+    }
+
+    .profileicon {
+
+        position: absolute;
+        right: -10px;
+        top: 0;
+    }
+
+    .moudlename .department-logo {
+
+        font-size: 0.85rem;
+
+        display: none;
+    }
+
+    .dash-head {
+
+        font-size: 1rem;
+        margin-left: 2em;
+        text-align: center;
+        width: 80%;
+        display: none;
+    }
+
+    .moudlename {
+
+        font-size: 1.1rem;
+        /*! margin-left: 2em; */
+        text-align: left;
+        width: 80%;
+    }
+
+    .arrow-steps .step {
+
+        padding: 10px;
+        width: 48.4% !important;
+        margin-bottom: 5px !important;
+    }
+
+    .dashboard {
+        width: 100%;
+        background: #ffffff30;
+    }
+
+    .contentwraper {
+
+        padding-top: 55px;
+
+    }
+
+    div.bhoechie-tab-menu div.list-groups>a,
+    div.bhoechie-tab-menu div.list-groups>a.active,
+    div.bhoechie-tab-menu div.list-groups>a.active .glyphicon,
+    div.bhoechie-tab-menu div.list-groups>a.active .fa {
+
+        margin-right: 0;
+    }
+
+
+
+
+    div.bhoechie-tab-menu div.list-groups>a {
+
+        width: 20%;
+
+        padding: 0;
+        font-size: 0.8em;
+    }
+
+    .bhoechie-tab-menu .list-group-item span {
+        opacity: 0.9;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0;
+        background: #fff;
+        display: block;
+        padding: 10px;
+        color: #292c2b;
+        border-radius: 50%;
+        height: 41px;
+        width: 41px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .menusidebar {
+        width: 240px;
+    }
+
+    .menuheader-width {
+        left: 0px;
+    }
+
+    .menusidebar-width {
+        width: 0px;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        padding: 10px;
+    }
+
+    .foot-list li {
+        font-size: 11px;
+        margin: 0;
+        padding: 0;
+    }
+
+}

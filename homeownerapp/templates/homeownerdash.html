@@ -1,0 +1,50 @@
+{% extends 'homeownerbase.html' %}
+{% load static %}
+{% block homeowner %}
+<h1 style="font-family:'Algerian', serif; color:rgb(15, 83, 61)">Homeowner dashboard</h1>
+<div class="row py-3  px-3">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12 mx-auto ">
+                <div class="card shadow  py-3 px-4">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h2 style="font-family:'Algerian', serif; color:rgb(15, 83, 61)" >Sales Summary</h2>
+                        </div>
+                        <div class="col-sm-2 px-3" style="color:rgb(8, 8, 100)"> <button type="submit"
+                                class="btn btn-outline" style="background-color:rgb(207, 245, 245)">Export</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card shadow circle py-2 px-2" style="background-color: rgb(243, 140, 152);">
+                                <h5>Total Projects</h5>
+                                <p> 12</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card shadow py-2 px-2" style="background-color: rgb(230, 196, 201);"
+                                id="circle">
+                                <h5>View Projects</h5>
+                                <p>Last day +5%</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card shadow py-2 px-2" style="background-color: rgb(234, 125, 238);">
+                                <h5>Running Projects</h5>
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card shadow py-2 px-2" style="background-color: rgb(97, 233, 142);">
+                                <h5>Completed Projects</h5>
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

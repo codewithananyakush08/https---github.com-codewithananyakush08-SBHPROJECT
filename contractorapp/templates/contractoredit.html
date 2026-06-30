@@ -1,0 +1,38 @@
+{% extends 'contractorbase.html' %}
+{% load static %}
+{% block contractor %}
+<h4 style="font-family:'Algerian', serif; color:rgb(15, 83, 61)" >Contractor Edit</h4>
+<form method="post" class="row g-4" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row g-4">
+        <div class="col-sm-6">
+            <label for="n" class="form-label">Name</label>
+            <input type=" text" value="{{contractor.name}}" name="name" id="n" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <label for="cn" class="form-label">Contactno</label>
+            <input type=" text" value="{{contractor.contactno}}" name="contactno" id="cn" class="form-control">
+
+        </div>
+        <div class="col-sm-6">
+            <label for="em" class="form-label">Email</label>
+            <input type="text" value="{{contractor.email}}" nmae="email" id="em" class="form-control" disabled>
+        </div>
+        <div class="col-sm-6">
+            <label for="pro" class="form-label">Choose profile picture</label>
+            <input type="file" name="profile" class="form-control" id="pro">
+        </div>
+        <div class="col-sm-12">
+            <label for="ad" class="form-label">Enter Full Address</label>
+            <textarea name="address" id="ad"  class="form-control">{{contractor.addres}}</textarea>
+        </div>
+        <div class="col-sm-12">
+            <label for="bio" class="form-label">bio</label>
+            <textarea name="bio" id="bio" class="form-control">{{contractor.bio}}</textarea>
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn"style=" background-color:rgb(15, 83, 61)"><span style="color:aliceblue">Update</span></button>
+        </div>
+    </div>
+</form>
+{% endblock %}

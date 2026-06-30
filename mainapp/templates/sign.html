@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+sign in page
+{% endblock %}
+{% block main %}
+<div class="row" style="background-color: #1e2939;">
+    <div class="col-sm-8 my-5 mx-5 mx-auto">
+        <div class="row">
+            <div class="col-sm-6 py-4 px-4" id="read1">
+                <h2 style="color:aliceblue"> Bulid Your Future</h2>
+                <span style="color:aliceblue">
+                    Join our platform to access exclusive construction services and project management tools.</span>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="book1"></div>
+                    </div>
+                    <div class="col-sm-10"> <span style="color:aliceblue">
+                            <h4>Secure Access</h4>
+                            <p>Your data is always process</p>
+                        </span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="book2"></div>
+                    </div>
+                    <div class="col-sm-10"> <span style="color:aliceblue">
+                            <h4>Quick Setup</h4>
+                            <p>Get started in less than 2 minutes</p>
+                        </span></div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="read2">
+                <div class="row border mt-2 py-3 px-3" style="background-color:#f3f4f6 ;">
+                    <div class="col-sm-6"><a href="{% url 'sign' %}" style="text-decoration: none;"> <span
+                                style="color:black">Sign In</span></a></div>
+                    <div class="col-sm-6"> <a href="{% url 'signup' %}" style="text-decoration: none;"> <span
+                                style="color:black">Sign up</span></a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 py-3 px-4">
+                        <h2>Welcome back</h2>
+                        {% if messages %}
+                        {% for m in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{m}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder=" Enter your email" name="username" required>
+                            </div>
+                            <label for="inputPassword5" class="form-label">Password</label>
+                            <input type="password" id="inputPassword5" class="form-control"
+                                aria-describedby="passwordHelpBlock" name="password" required>
+                            <div id="passwordHelpBlock" class="form-text">
+                            </div><br>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">&nbsp;&nbsp;Remember me</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="" style="text-decoration: none;"><span style="color:#ff6900"><small>Forgot
+                                            password ?</small></span></a>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn w-100" style="background-color: #ff6900;">Sign
+                                In</button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

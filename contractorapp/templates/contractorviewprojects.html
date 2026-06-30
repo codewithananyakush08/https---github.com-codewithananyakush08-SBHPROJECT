@@ -1,0 +1,72 @@
+{% extends 'contractorbase.html' %}
+{% load static %}
+{% block contractor %}
+<h1 style="font-family:'Algerian', serif; color: #176d6d;"> New Projects</h1>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>S.No</th>
+            <th>Project Name</th>
+            <th>Duration(In days)</th>
+            <th>Budget</th>
+            <th>Location</th>
+            <th>
+                Homeowner
+            </th>
+            <th>Status</th>
+            <th>Plot Size</th>
+            <th>House Type</th>
+            <th>No. Of Floors</th>
+            <th>Basement</th>
+            <th>Parking</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Kitchen on each Floor </th>
+            <th>Addition Rooms</th>
+            <th>Outdoor Areas</th>
+            <th>Action</th>
+            <th></th>
+        </tr>
+        {% for p in projects %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{p.projectname}}</td>
+            <td>{{p.duration}}</td>
+            <td>{{p.budget}}</td>
+            <td>{{p.location}}</td>
+            <td>
+                {% if p.homeowner.picture %}
+                <img src="{{p.homeowner.picture.url}}" alt="" height="50px;" width="50px;">
+                {% endif %}
+                {{p.homeowner.name}}
+                {{p.homeowner.contactno}}
+
+
+            </td>
+            <td>{{p.status}}</td>
+            <td>{{p.plot_size}}</td>
+            <td>{{p.house_type}}</td>
+            <td>{{p.num_floors}}</td>
+            <td>{{p.basement}}</td>
+            <td>{{p.parking_required}}</td>
+            <td>{{p.bedrooms}}</td>
+            <td>{{p.bathrooms}}</td>
+            <td>{{p.kitchen_each_floor}}</td>
+            <td>{{p.additional_rooms}}</td>
+            <td>{{p.outdoor_areas}}</td>
+            <td><a href="{% url 'applyproject' id=p.id %}" class="btn btn" style="background-color: #176d6d;">Apply</a></td>
+        </tr>
+
+
+
+
+
+        {% endfor %}
+    </table>
+
+</div>
+
+
+
+
+{% endblock %}

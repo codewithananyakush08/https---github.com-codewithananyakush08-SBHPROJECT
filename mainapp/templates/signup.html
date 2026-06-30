@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Sign Up page
+{% endblock %}
+{% block main %}
+<div class="row" style="background-color: #1e2939;">
+    <div class="col-sm-8 my-5 mx-5 mx-auto">
+        <div class="row">
+            <div class="col-sm-6 py-4 px-4" id="read3">
+                <h2 style="color:aliceblue"> Bulid Your Future</h2>
+                <span style="color:aliceblue">
+                    Join our platform to access exclusive construction services and project management tools.</span>
+                <br><br><br><br><br><br><br><br>
+                <hr style="color:antiquewhite"><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="book1"></div>
+                    </div>
+                    <div class="col-sm-10"> <span style="color:aliceblue">
+                            <h4>Secure Access</h4>
+                            <p>Your data is always process</p>
+                        </span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="book2"></div>
+                    </div>
+                    <div class="col-sm-10"> <span style="color:aliceblue">
+                            <h4>Quick Setup</h4>
+                            <p>Get started in less than 2 minutes</p>
+                        </span></div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="read4">
+                <div class="row border mt-2 py-3 px-3" style="background-color:#f3f4f6 ;">
+                    <div class="col-sm-6"><a href="{% url 'sign' %}" style="text-decoration: none;"> <span
+                                style="color:black">Sign In</span></a></div>
+                    <div class="col-sm-6"> <a href="{% url 'signup' %}" style="text-decoration: none;"> <span
+                                style="color:black">Sign up</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12  px-4 py-4">
+                        <h2>Create Account</h2>
+                        {% if messages %}
+                        {% for m in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{m}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="name" class="form-control" id="n" name="name" required>
+                                        <label for="n"> Full name</label>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="cn" placeholder="Enter your number"
+                                        name="contactno" required>
+                                    <label for="cn">Contact no</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="em" placeholder="name@example.com"
+                                        name="email" required>
+                                    <label for="em">Email address</label>
+                                </div>
+                                <div class="col-ms-12">
+                                    <label for="utype" class="form-label" id="utype"> Select
+                                        Usertype</label>
+                                    <select class="form-select" name="usertype" id="utype" required>
+                                        <option selected disabled>Open this select menu</option>
+                                        <option value="homeowner">Homeowner</option>
+                                        <option value="contractor">Contractor</option>
+                                    </select>
+                                </div>
+                                <div class="form-floating mt-3">
+                                    <input type="password" class="form-control" id="password" placeholder="Password"
+                                        name="password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                   
+                                
+                                <button type="submit" class="btn btn w-100  mt-5" style="background-color: #ff6900;"><span
+                                        style="color:#f3f4f6"><b>Create Account</b></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

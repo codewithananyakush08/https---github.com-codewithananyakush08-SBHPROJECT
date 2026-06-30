@@ -1,0 +1,39 @@
+
+{% extends 'contractorbase.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'contractorapp/css/style.css' %}">
+{% endblock %}
+{% block contractor %}  
+<body class="bg-image">
+    <div class="row py-4 px-4">
+        <div class="col-sm-5 mx-auto">
+            <form class="login-box shadow" method="post" style="background-color:#176d6d;">
+                {% csrf_token %}
+                <h2 style="font-family:'Algerian', serif;">Change Password</h2>
+                <div class="input-box">
+                    <input type="password" name="oldpwd" required>
+                    <label>Old password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="newpwd" required>
+                    <label> New Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="confirmpwd" required>
+                    <label>Confirm Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" style="background-color: #94dada;">Update password</button>
+                <p class="register-link">Don't have an account? <a href="#">Sign</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

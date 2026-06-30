@@ -1,0 +1,373 @@
+#navbar {
+  height: 60px;
+  background-color: #101828;
+  border-radius: 20px 20px 0px 0px;
+
+}
+
+#image {
+  margin-top: 100px;
+}
+
+#priyanka {
+  font-size: 35px;
+}
+
+#house {
+  height: 50px;
+  width: 30px;
+  border: 1px solid pink;
+  background-color: pink;
+}
+
+.anu {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: #ffedd4;
+}
+
+.ram {
+  margin-top: 100px;
+}
+
+.anushka {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid orange;
+  background-image: url('../img/ramji.jpg');
+}
+
+.subscribe-form input {
+  padding: 12 10 px;
+  outline: none;
+  border: none;
+  width: 250px;
+  background-color: #ffedd4;
+  color: #ffedd4;
+  font-size: 16px;
+}
+
+.subscribe-form button {
+  background-color: orange;
+  /*padding:0px   px;*/
+  outline: none;
+  border: none;
+  color: #ffedd4;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.subscribe-form button-hover {
+  background-color: darkorange;
+}
+
+.very {
+  height: 300px;
+  width: 500px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 330px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.category {
+  color: orange;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-card h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.project-card a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.ruchi {
+  font-size: 60px;
+  ;
+}
+
+.box {
+  height: 130px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: #1a1a36;
+  border: 1px solid #1a1a36;
+  margin-right: 30px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: orange;
+  transition: width 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.card:hover::after {
+  width: 100%;
+}
+
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: #555;
+  font-size: 14px;
+}
+
+.riya {
+  height: 140px;
+  width: 230px;
+  background-color: #ea7124;
+  border-radius: 5px;
+}
+
+#read1 {
+  height: 520px;
+  width: 400px;
+  background-color: #ea7124;
+  border-radius: 15px 0px 0px 15px;
+  border: 1px solid white;
+}
+
+#read2 {
+  height: 520px;
+  width: 400px;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  border: 1px solid white;
+}
+#book1 {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid white;
+}
+#book2 {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid white;
+}
+#read3 {
+  height: 620px;
+  width: 450px;
+  background-color: #ea7124;
+  border-radius: 15px 0px 0px 15px;
+  border: 1px solid white;
+}
+#read4 {
+  height: 620px;
+  width: 450px;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  border: 1px solid white;
+}
+
+#pen {
+  height: 50px;
+  width: 50px;
+  background-color:#442c24;
+  border:2px solid #442c24;  
+  border-radius: 5px;
+}
+#rohan1 {
+  height: 50px;
+  width: 50px;
+  background-color: #442c24;
+  border-radius: 5px;
+  border: 2px solid#442c24;
+}
+
+#mohan {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6900;
+  border-radius: 5px;
+  border: 2px solid#ff6900;
+}
+
+.ruchi {
+  border-radius: 5px;
+}
+
+#rohan2 {
+  height: 50px;
+  width: 50px;
+  background-color: #442c24;
+  border-radius: 5px;
+  border: 2px solid#442c24;
+}
+
+#sona {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6900;
+  border-radius: 5px;
+  border: 1px solid#ff6900;
+}
+
+#sona1 {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6900;
+  border-radius: 5px;
+  border: 1px solid#ff6900;
+}
+#sona2 {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6900;
+  border-radius: 5px;
+  border: 1px solid#ff6900;
+}
+#sona3 {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6900;
+  border-radius: 5px;
+  border: 1px solid#ff6900;
+}
+.radhika {
+  height: 30px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: pink;
+  border: 1px solid pink;
+  text-align: center;
+}
+.ritika {
+  font-size: 60px;
+}
+.free {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ffedd4;
+  background-color: #ffedd4;
+  border-radius: 5px;
+}
+.card-form {
+  height: 500px;
+  width: 450px;
+  background-color: #ffedd4;
+  border: 1px solid;
+  border-radius: 50px 0px 50px 0px;
+}
+.cup {
+  background-color: #f9fafb;
+  height: 300px;
+  width: 250px;
+}
+.cir {
+  border-radius: 50%;
+  background-color: #ffedd4;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+#fifty {
+  font-size: 65px;
+}
+
+.mission {
+  width: 70px;
+  background-color: #ff6900;
+  height: 3px;
+}
+.flag
+{
+  height:135px;
+  width:250px;
+  background-color: #fee7d3;
+}
+.miss {
+  width: 70px;
+  background-color: #ff6900;
+  height: 3px;
+}
+#dont{
+height:400px;
+width:530px;
+border:10px solid white;
+background-color: #fee7d3;
+background-image: url('../img/about.jpg');
+background-size:cover ;
+}
+.navbarNav .nar-link:hover{
+  color:#fff! important;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition:0.3s ease;
+}
+

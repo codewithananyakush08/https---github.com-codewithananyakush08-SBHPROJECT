@@ -1,0 +1,41 @@
+{% extends 'homeownerbase.html' %}
+{% load static %}
+{% block homeowner %}
+<body>
+    <h3 style="font-family:'Algerian', serif; color: rgb(28, 100, 100);">Homeowner Edit profile </h3>
+    <form method="post" class="row g-4" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row g-4">
+            <div class="col-sm-6">
+                <label for="n" class="form-label"> <b style="color:rgb(28, 100, 100);">Name</b></label>
+                <input type=" text" value="{{homeowner.name}}" name="name" id="n" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="cn" class="form-label"> <b style="color:rgb(28, 100, 100);">Contactno</b></label>
+                <input type=" text" value="{{homeowner.contactno}}" name="contactno" id="cn" class="form-control">
+
+            </div>
+            <div class="col-sm-6">
+                <label for="em" class="form-label"><b style="color:rgb(28, 100, 100);">Email</b></label>
+                <input type="text" value="{{homeowner.email}}" nmae="email" id="em" class="form-control" disabled>
+            </div>
+            <div class="col-sm-6">
+                <label for="pro" class="form-label"><b style="color:rgb(28, 100, 100);">Choose Profile
+                        Picture</b></label>
+                <input type="file" name="profile" class="form-control" id="pro">
+            </div>
+            <div class="col-sm-12">
+                <label for="ad" class="form-label"><b style="color:rgb(28, 100, 100);">Enter Full Address</b></label>
+                <textarea name="address" id="ad" class="form-control">{{homeowner.addres}}</textarea>
+            </div>
+            <div class="col-sm-12">
+                <label for="bio" class="form-label"><b style="color:rgb(28, 100, 100);">Bio</b></label>
+                <textarea name="bio" id="bio" class="form-control">{{homeowner.bio}}</textarea>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn" style="background-color:rgb(28, 100, 100);"> Update</button>
+            </div>
+        </div>
+    </form>
+</body>
+{% endblock %}

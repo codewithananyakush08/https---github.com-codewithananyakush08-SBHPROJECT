@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Contact us
+{% endblock %}
+{% block main %}
+<div class="row" style="background-color:#131b2b;">
+    <div class="col-sm-11 shadow mx-auto">
+        <div class="row py-5">
+            <div class="col-sm-6">
+                <span style="color:#ff6900"><b><i class="fa-solid fa-minus"></i> GET IN TOUCH <i
+                            class="fa-solid fa-minus"></i> </span></b><br><br>
+                <span style="color:antiquewhite">
+                    <h1 style="text-align:justify"><b>Ready to Start Your Project?</b></h1>
+                    <br>
+                    <p>Contact us today to discuss your construction needs. Our team is ready to <br>help bring your
+                        vision
+                        to life with our expert services and dedication to <br>excellence.</p>
+                    <br>
+                </span>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="pen">
+                            <i class="fa-solid fa-location-dot  pt-2 fa-2x" style="color:#ff6900"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 mt-3">
+                        <span style="color:aliceblue"><b>Our Location</b><br>
+                            <small>123 Construction Ave, Building City, 10001</small></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2  mt-3">
+                        <div id="rohan2">
+                            <i class="fa-solid fa-2x  pt-2 fa-phone" style="color:#ff6900"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 mt-3">
+                        <span style="color:aliceblue"><b>Call Us</b><br>
+                            <small>(555)123-4567</small></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 text-center mt-3">
+                        <div id="rohan1">
+                            <i class="fa-solid  pt-2 fa-2x  fa-envelope" style="color:#ff6900"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 mt-3">
+                        <span style="color:aliceblue"><b>Email Us</b><br>
+                            <small>info@contructioncompany</small></span>
+                    </div>
+                </div>
+                <div class="row text-center pt-5">
+                    <div class="col-sm-1" id="sona">
+                        <i class="fa-brands fa-2x fa-facebook" style="color:white"></i>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-sm-1" id="sona1">
+                        <i class="fa-brands fa-2x fa-twitter" style="color:aliceblue"></i>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-sm-1" id="sona2">
+                        <i class="fa-brands fa-2x  fa-instagram" style="color:aliceblue"></i>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-sm-2" id="sona3">
+                        <i class="fa-brands  fa-2x fa-linkedin-in" style="color:aliceblue"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6  border  py-4 px-4  my-5">
+                {% if messages %}
+                {% for m in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{m}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <form method="post" class="row">
+                    {% csrf_token %}
+                    <div class="col-sm-12 text-light">
+                        <label for="name"> Name</label>
+                        <input type="text" name="name" class="form-control mt-2" id="name"
+                            placeholder="Enter your name">
+                    </div>
+                    <div class="col-sm-12 text-light">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control mt-2" id="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="col-sm-12 text-light">
+                        <label for="contactno">Mobile</label>
+                        <input type="number" name="contactno" class="form-control mt-2" id="number"
+                            placeholder="Enter your moblie">
+                    </div>
+                    <div class="col-sm-12 text-light">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" class="form-control mt-2" id="name" placeholder="Subject">
+                    </div>
+                    <div class="col-sm-12 text-light">
+                        <label for="exampleFormControlTextarea1" class="form-label"
+                            placeholder="message">Message</label>
+                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="col-sm-12 mt-4">
+                        <button type="submit" class="btn btn w-100" style="background-color: #ff6900;">send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

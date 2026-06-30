@@ -1,0 +1,51 @@
+{% extends 'homeownerbase.html' %}
+{% load static %}
+{% block homeowner %}
+
+<body>
+    
+        <div class="row p-0 py-5" style=" background-color:rgb(179, 201, 201);">
+            <div class="col-sm-5 px-5">
+            
+                <div class="card shadow" style="border-radius: 40px;  background-color: rgb(23, 109, 109);">
+                    <div class="card-header text-center">
+                        {% if homeowner.picture %}
+                        <img src="{{homeowner.picture.url}}" alt="" height="200px" width="200px"
+                            style="border-radius: 50%; border:5px solid rgb(17, 17, 20)">
+                        {% else %}
+                        <img src="" alt="" height="100px" width="100px" style="border-radius: 50%;">
+                        {% endif %}
+                        <br><br><br>
+                        <h4 style="font-family:'Algerian', serif; color: aquamarine;">{{homeowner.name}}</h4>
+                        <h5 style="font-family: 'Courier New', Courier, monospace; "> Homeowner</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mx-auto">
+                <div class="card shadow" style="border-radius: 40px;  background-color: rgb(23, 109, 109);">
+                    <div class="card-body  py-5 px-5 text-center">
+                        <h1 style="font-family:'Algerian', serif; color:aquamarine">Profile Details</h1>
+                        <div style="text-align: justify;" style="color:aquamarine">
+                            <h5><b>Email address :</b> {{homeowner.email}}<br>
+                                <b>Contactno :</b> {{homeowner.contactno}}<br>
+                                <b>Address :</b>{{ homeowner.address}}<br>
+                                <b>Bio :</b>{{homeowner.bio}}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'homeowneredit' %}" class="btn btn"
+                            style="background-color: rgb(238, 229, 229);"><span style="color:rgb(15, 83, 61)"> <b>Update
+                                    Profile</b></span>
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+</body>
+{% endblock %}

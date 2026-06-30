@@ -1,0 +1,43 @@
+{% extends 'contractorbase.html' %}
+{% load static %}
+{% block contractor %}
+    <h1 style="font-family:'Algerian', serif; color:rgb(15, 83, 61)">Contractor Profile Edit</h1>
+    <div class="row mt-5">
+        <div class="col-sm-4 ms-5">
+            <div class="card shadow" style="border-radius: 50px; background-color:#176d6d">
+                <div class="card-header text-center">
+                    {% if contractor.picture %}
+                    <img src="{{contractor.picture.url}}" alt="" height="250px" width="200px"
+                        style="border-radius: 50%; border:5px solid rgb(17, 19, 8)">
+                    {% else %}
+                    <img src="" alt="" height="100px" width="100px" style="border-radius: 50%;">
+                    {% endif %}<br><br>
+                    <h4 style="font-family:'Algerian', serif;   color:black">{{contractor.name}}</h4>
+                    <h6 style="font-family: 'Courier New', Courier, monospace; color:rgb(153, 143, 143)"> Contractor
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mx-auto">
+            <div class="card shadow" style="border-radius: 50px; background-color:#176d6d;">
+
+                <div class="card-body text-center">
+                    <h1 style="font-family:'Algerian', serif;">Profile Details</h1>
+                    <h4 style="color:rgb(153, 143, 143)"> Contractor </h4>
+                    <div style="text-align: justify;">
+                        <b>Email address:</b><b style="color:rgb(228, 221, 221);">&nbsp;&nbsp;{{contractor.email}}</b><br>
+                        <b>Contactno:</b><b style="color:rgb(228, 221, 221);">&nbsp;&nbsp;{{contractor.contactno}}</b><br>
+                        <b>Address: </b><b style="color:rgb(228, 221, 221);">&nbsp;&nbsp;{{contractor.address}}</b><br>
+                        <b>Bio:</b><b style="color:rgb(228, 221, 221);">&nbsp;&nbsp;{{contractor.bio}}</b>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{% url 'contractoredit' %}" class="btn btn"
+                        style="background-color: rgb(238, 229, 229);"><span style="font-family:'Algerian', serif; color:rgb(15, 83, 61)"> <b>Update
+                                Profile</b></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
