@@ -1,4 +1,4 @@
-Smart Build Hub
+ Smart Build Hub
 A web-based platform to simplify construction project management by connecting Admins, Contractors, and Homeowners in one system.
 
 📌 Overview
@@ -32,9 +32,7 @@ Track project status
 ⚙️ Main App (mainapp)
 Handles authentication and common functionalities
 
-
 🛠️ Tech Stack
-
 Backend: Python (Django)
 
 Frontend: HTML, CSS, Bootstrap
@@ -58,3 +56,4 @@ lack of transparency, and poor communication.
 4.To improve transparency by allowing real-time project tracking
 5.To help people living in other cities or countries monitor their home construction remotely
 6. To make the construction process more efficient, secure, and reliable
+
