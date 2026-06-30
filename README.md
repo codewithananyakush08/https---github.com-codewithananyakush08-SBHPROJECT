@@ -19,10 +19,12 @@ It allows users to manage projects, assign contractors, and track progress easil
 Manage users (Contractor & Homeowner)
 Approve and monitor projects
 Full system control
+
 👷 Contractor (contractorapp)
 View available projects
 Apply for projects
 Update work progress
+
 🏠 Homeowner (homeownerapp)
 Create new projects
 Assign contractors
@@ -30,9 +32,13 @@ Track project status
 ⚙️ Main App (mainapp)
 Handles authentication and common functionalities
 
+
 🛠️ Tech Stack
+
 Backend: Python (Django)
+
 Frontend: HTML, CSS, Bootstrap
+
 Database: SQLite
 
 📂 Project Structure
